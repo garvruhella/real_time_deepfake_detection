@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Deepfake Detector",
+  "version": "1.0",
+  "description": "On-device hybrid deepfake detector for images and videos.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "models/*.onnx",
+        "models/*.json",
+        "inference/*.js",
+        "vendor/onnxruntime-web/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "image_size": 128,
+  "normalization": {
+    "mean": [0.5, 0.5, 0.5],
+    "std": [0.5, 0.5, 0.5]
+  },
+  "fusion": {
+    "detector_weight": 0.7,
+    "discriminator_weight": 0.3,
+    "threshold": 0.5
+  }
+}

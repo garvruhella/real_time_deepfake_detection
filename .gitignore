@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+
+# Local environments
+.venv/
+venv/
+
+# Large or generated artifacts
+datasets/
+node_modules/
+outputs/
+runs/
+samples/
+temp/
+results_detector/
+checkpoints/
+videos_to_use/
+
+# Model/checkpoint/video binaries
+*.pth
+*.pt
+*.onnx
+*.mp4
+*.avi
+*.mov
